@@ -465,54 +465,6 @@ function App() {
           </div>
         </div>
 
-        {/* Additional Info */}
-        <Card className="bg-gradient-to-r from-emerald-800/40 to-teal-800/40 border-emerald-600/30">
-          <CardContent className="p-4 space-y-3">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                <BookOpen className="w-5 h-5 text-emerald-300" />
-              </div>
-              <div>
-                <h3 className="font-bold text-emerald-100">Important Information</h3>
-              </div>
-            </div>
-            <div className="bg-emerald-950/50 rounded-lg p-3 space-y-2 text-sm">
-              <p className="text-emerald-300">
-                <span className="text-emerald-500">Niyat for Fasting:</span> {additionalInfo.niyatForFasting}
-              </p>
-              <p className="text-emerald-300">
-                <span className="text-emerald-500">Dua for Breaking Fast:</span> {additionalInfo.duaForBreakingFast}
-              </p>
-              <p className="text-emerald-300">
-                <span className="text-emerald-500">Fitrana:</span> {additionalInfo.fitrana}
-              </p>
-              <p className="text-emerald-300">
-                <span className="text-emerald-500">Qur'an Khatam:</span> {additionalInfo.quranKhatam}
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
-        {/* Eid Info */}
-        <Card className="bg-gradient-to-r from-emerald-800/40 to-teal-800/40 border-emerald-600/30">
-          <CardContent className="p-4">
-            <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center">
-                <Sun className="w-5 h-5 text-emerald-300" />
-              </div>
-              <div>
-                <h3 className="font-bold text-emerald-100">Eid al-Fitr</h3>
-                <p className="text-sm text-emerald-400">Friday, 20/3/2026</p>
-              </div>
-            </div>
-            <div className="bg-emerald-950/50 rounded-lg p-3 text-center">
-              <p className="text-sm text-emerald-300">
-                {additionalInfo.eidNote}
-              </p>
-            </div>
-          </CardContent>
-        </Card>
-
         {/* Footer */}
         <footer className="text-center text-emerald-200 py-6 mt-2">
           <p className="text-xs">Based on IFOL website schedules</p>
