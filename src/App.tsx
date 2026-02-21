@@ -148,11 +148,12 @@ function App() {
                 <Moon className="w-5 h-5 text-emerald-300" />
               </div>
               <div>
-  <h1 className="text-lg font-bold text-emerald-100">Ramadan 2026</h1>
-  <p className="text-xs text-emerald-300 flex items-center gap-1">
-    <MapPin className="w-3.5 h-3.5 text-emerald-400" />
-    Champaign
-  </p>
+                <h1 className="text-lg font-bold text-emerald-100">Islamic Foundation of Lincoln</h1>
+                <p className="text-xs text-emerald-400">Lincoln</p>
+    <MapPin className="w-3 h-3" />
+            Lincoln
+          </p>
+          <p>Islamic Foundation of Lincoln (IFOL)</p>
 </div>
 
             </div>
