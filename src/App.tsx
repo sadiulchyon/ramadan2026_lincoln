@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import { ramadan2026Data, additionalInfo, type PrayerDay } from './data/prayerTimes';
+import { ramadan2026Data, type PrayerDay } from './data/prayerTimes';
 import { quranAyats } from './data/quranAyats';
 import { Moon, Sun, ChevronLeft, ChevronRight, Calendar, Utensils, Coffee, MapPin } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
