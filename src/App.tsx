@@ -140,7 +140,7 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-900 via-emerald-800 to-emerald-900 text-white">
       {/* Header */}
-      <header className="bg-emerald-950/80 backdrop-blur-md border-b border-emerald-800/50 sticky top-0 z-50">
+      <header className="bg-emerald-950/80 backdrop-blur-md border-b border-emerald-700/50 sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -150,12 +150,7 @@ function App() {
               <div>
                 <h1 className="text-lg font-bold text-emerald-100">Islamic Foundation of Lincoln</h1>
                 <p className="text-xs text-emerald-400">Lincoln</p>
-    <MapPin className="w-3 h-3" />
-            Lincoln
-          </p>
-          <p>Islamic Foundation of Lincoln (IFOL)</p>
-</div>
-
+              </div>
             </div>
             <div className="text-right">
               <p className="text-sm font-medium text-emerald-200">
