@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+dimport { useState, useEffect, useMemo } from 'react';
 import { ramadan2026Data, type PrayerDay } from './data/prayerTimes';
 import { quranAyats } from './data/quranAyats';
 import { Moon, Sun, ChevronLeft, ChevronRight, Calendar, Utensils, Coffee, MapPin } from 'lucide-react';
@@ -377,7 +377,7 @@ function App() {
             Lincoln
           </p>
           <p>Islamic Foundation of Lincoln (IFOL)</p>
-          <p>Ramadhaan 1447 / 2026 CE</p>
+          <p>vibecoded by saadi, with claude & love</p>
         </footer>
       </main>
     </div>
