@@ -117,8 +117,9 @@ function App() {
 
       <main className="max-w-4xl mx-auto px-4 py-6 space-y-6">
         
-        {/* Quran Ayat Rotator (CIMIC SVG Background) */}
-        <Card className="relative overflow-hidden border-0 shadow-xl bg-[#0b1026] h-48 group">
+        {/* Quran Ayat Rotator — Compact Mountain Range Edition */}
+        {/* CHANGED: h-40 (160px) fixed height */}
+        <Card className="relative overflow-hidden border-0 shadow-xl bg-[#0b1026] h-40 group">
             {/* Sky Gradient */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-950 via-slate-900 to-[#020617]" />
 
@@ -130,15 +131,15 @@ function App() {
                 <div className="absolute top-14 right-10 w-0.5 h-0.5 bg-slate-300 rounded-full" />
             </div>
 
-            {/* Cascading Mountains Layer */}
+            {/* Cascading Mountains Layer - Adjusted heights for shorter container */}
             <div className="absolute inset-x-0 bottom-0 w-full h-full pointer-events-none">
-                {/* Back Range */}
-                <svg className="absolute bottom-0 w-full h-[85%] text-emerald-900/30" viewBox="0 0 1200 320" preserveAspectRatio="none">
+                {/* Back Range - Taller relative to container */}
+                <svg className="absolute bottom-0 w-full h-[85%] text-indigo-900/30" viewBox="0 0 1200 320" preserveAspectRatio="none">
                     <path fill="currentColor" d="M0,224L48,208C96,192,192,160,288,165.3C384,171,480,213,576,229.3C672,245,768,235,864,208C960,181,1056,139,1152,133.3C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                 </svg>
 
                 {/* Mid Range */}
-                <svg className="absolute bottom-0 w-full h-[65%] text-emerald-950/50" viewBox="0 0 1200 320" preserveAspectRatio="none">
+                <svg className="absolute bottom-0 w-full h-[65%] text-slate-900/50" viewBox="0 0 1200 320" preserveAspectRatio="none">
                     <path fill="currentColor" d="M0,288L60,272C120,256,240,224,360,224C480,224,600,256,720,250.7C840,245,960,203,1080,197.3C1200,192,1320,224,1380,240L1440,256L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
                 </svg>
 
@@ -152,19 +153,25 @@ function App() {
             <span key={shootingStarKey} className="shooting-star" aria-hidden="true" />
 
             {/* Content Overlay */}
-            <CardContent className="relative z-10 px-6 py-0 flex items-center justify-center h-full">
-                <div className="flex flex-col items-center justify-center text-center w-full max-w-2xl mx-auto h-full">
-                    <div className="min-w-0 animate-in fade-in zoom-in duration-700 space-y-3">
-                        {quranAyats[currentAyatIndex].arabic && (
-                           <p className="text-xl font-arabic text-amber-50 leading-relaxed drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]" dir="rtl">
-                               {quranAyats[currentAyatIndex].arabic}
-                           </p>
-                        )}
-                        <div className="space-y-1">
-                            <p className="text-sm md:text-base text-emerald-100 italic leading-snug font-light drop-shadow-md line-clamp-3">
+            <CardContent className="relative z-10 px-4 py-0 flex items-center justify-center h-full">
+                <div
+                    className="flex flex-col items-center justify-center gap-1 text-center select-none touch-pan-y w-full max-w-2xl mx-auto"
+                    onTouchStart={(e) => handleSwipeStart(e.touches[0].clientX)}
+                    onTouchEnd={(e) => handleSwipeEnd(e.changedTouches[0].clientX)}
+                    onTouchCancel={handleSwipeCancel}
+                    onMouseDown={(e) => handleSwipeStart(e.clientX)}
+                    onMouseUp={(e) => handleSwipeEnd(e.clientX)}
+                    onMouseLeave={handleSwipeCancel}
+                >
+                    <div className="min-w-0 animate-in fade-in zoom-in duration-700 space-y-1">
+                        <p className="text-xl font-arabic text-amber-50 text-center leading-relaxed drop-shadow-[0_2px_2px_rgba(0,0,0,0.8)]" dir="rtl">
+                            {quranAyats[currentAyatIndex].arabic}
+                        </p>
+                        <div className="space-y-0.5">
+                            <p className="text-sm text-indigo-100 italic leading-snug font-light drop-shadow-md line-clamp-2">
                                 "{quranAyats[currentAyatIndex].english}"
                             </p>
-                            <p className="text-[10px] md:text-xs text-emerald-300/80 uppercase tracking-widest font-medium mt-2">
+                            <p className="text-[10px] text-indigo-300/80 uppercase tracking-widest font-medium">
                                 {quranAyats[currentAyatIndex].reference}
                             </p>
                         </div>
